@@ -63,9 +63,9 @@ export function Header({ bgIsLoaded, isHomePage = false, isNavbar = false }) {
                 className={`header__nav-link ${location.pathname === "/team" ? "active" : ""
                   }`}
               >
-                Team
+                team
               </Link>
-              <span className="header__roles-text">Open Roles</span>
+              <span className="header__roles-text">open roles</span>
             </nav>
         }
       </div>
