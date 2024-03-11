@@ -1,0 +1,170 @@
+.roles-assessment {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  max-width: 1600px;
+  margin: auto;
+  @media (min-width: 768px) {
+    padding: 80px 32px;
+  }
+  @media (min-width: 1400px) {
+    padding: 80px 60px;
+  }
+}
+
+.roles-assessment__inner {
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+  gap: 16px;
+  @media (min-width: 768px) {
+    grid-template-columns: 5fr 5fr;
+  }
+}
+
+.roles-assessment__heading-container {
+  max-width: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 16px;
+  @media (min-width: 430px) {
+    max-width: 190px;
+  }
+  @media (min-width: 500px) {
+    max-width: 100%;
+    align-items: flex-end;
+    padding-left: 0;
+  }
+  @media (min-width: 1140px) {
+    align-items: flex-start;
+  }
+}
+
+.roles-assessment__heading {
+  font-size: 22px;
+  font-weight: 600;
+  max-width: 167px;
+  @media (min-width: 430px) {
+    font-size: 24px;
+    max-width: 171px;
+  }
+  @media (min-width: 768px) {
+    font-size: 32px;
+    max-width: 280px;
+  }
+  @media (min-width: 1140px) {
+    max-width: 100%;
+    padding-bottom: 32px;
+  }
+}
+
+.roles-assessment__video-container {
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+  background-image: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(238, 247, 253, 0) 58.66%,
+    #eef7fd 100%
+  );
+  @media (min-width: 768px) {
+    max-width: 550px;
+    height: 400px;
+  }
+  @media (min-width: 1210px) {
+    max-width: 100%;
+    width: 620px;
+  }
+  @media (min-width: 1440px) {
+    width: 800px;
+  }
+}
+
+.roles-assessment__video {
+  width: 100%;
+  max-width: 330px;
+  height: auto;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @media (min-width: 768px) {
+    max-width: 100%;
+  }
+  @media (min-width: 1200px) {
+    width: 100%;
+  }
+}
+
+/* stages grid */
+
+.application-stages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.application-stages--desktop {
+  visibility: hidden;
+  height: 0;
+  @media (min-width: 1140px) {
+    visibility: visible;
+    height: auto;
+    gap: 16px;
+  }
+}
+.application-stages--mobile {
+  display: grid;
+  gap: 8px;
+  max-width: 417px;
+  padding: 0 12px;
+  margin: auto;
+  @media (min-width: 528px) {
+    padding-top: 24px;
+  }
+  @media (min-width: 768px) {
+    max-width: 600px;
+    padding-top: 24px;
+    gap: 16px;
+  }
+  @media (min-width: 1140px) {
+    display: none;
+  }
+}
+
+.application-stages__stage {
+  display: flex;
+  align-items: center;
+  padding: 12px 6px;
+  background-color: #fff;
+  border-radius: 5px;
+  @media (min-width: 1340px) {
+    padding: 16px;
+  }
+}
+
+.application-stages__icon-container {
+  width: 16px;
+  height: 16px;
+
+  @media (min-width: 768px) {
+    width: 24px;
+    height: 24px;
+  }
+  @media (min-width: 768px) {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.application-stages__title {
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 8px;
+  @media (min-width: 430px) {
+    font-size: 14px;
+  }
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
+}

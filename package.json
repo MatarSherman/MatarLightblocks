@@ -1,0 +1,29 @@
+{
+  "name": "lightblocks-next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbo",
+    "build": "next build && next export",
+    "actualBuild": "next build",
+    "fetch-role-data": "node ./scripts/fetchRoleData.js",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@radix-ui/react-accordion": "^1.1.2",
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^1.0.54",
+    "@studio-freight/react-lenis": "^0.0.45",
+    "next": "14.1.0",
+    "react": "^18",
+    "react-device-detect": "^2.2.3",
+    "react-dom": "^18",
+    "sanitize-html": "^2.12.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0"
+  }
+}

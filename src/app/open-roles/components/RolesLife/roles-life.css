@@ -1,0 +1,88 @@
+.roles-life {
+  max-width: 1600px;
+  margin: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.roles-life__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0 16px;
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+.roles-life__text {
+  text-align: center;
+  @media (min-width: 768px) {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.roles-life__heading {
+  font-size: 24px;
+  font-weight: 600;
+  padding-bottom: 24px;
+  @media (min-width: 768px) {
+    font-size: 32px;
+  }
+}
+
+.roles-life__paragraph {
+  padding-bottom: 24px;
+  line-height: 25.6px;
+  letter-spacing: -0.02em;
+  max-width: 495px;
+  margin: auto;
+  @media (min-width: 768px) {
+    margin: 0;
+  }
+}
+
+.roles-life__video-container {
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  justify-self: center;
+  background-image: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(238, 247, 253, 0) 58.66%,
+    #eef7fd 100%
+  );
+  @media (min-width: 500px) {
+    height: 300px;
+    max-width: 420px;
+  }
+  @media (min-width: 768px) {
+    height: 400px;
+    margin: 0;
+    order: -1;
+    max-width: 550px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 100%;
+    width: 750px;
+  }
+}
+
+.roles-life__video {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @media (min-width: 1200px) {
+    width: 100%;
+  }
+}

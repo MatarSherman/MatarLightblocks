@@ -1,0 +1,55 @@
+.button-link {
+  padding: 12px 1rem;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #2a2a31;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 5px 6px 10.5px 0px #4cc1ad4d;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: -0.03em;
+  @media (min-width: 430px) {
+    font-size: 16px;
+    padding: 18px 20px;
+  }
+  @media (min-width: 768px) {
+    font-size: 18px;
+    padding: 20px 2rem;
+  }
+}
+
+.button-link--full-width {
+  width: 100%;
+  @media (min-width: 450px) {
+    width: auto;
+  }
+}
+
+.button-link--primary {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(16.95%, rgba(0, 153, 127, 0.77)),
+    color-stop(115.87%, rgba(44, 207, 152, 0.77))
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(0, 153, 127, 0.77) 16.95%,
+    rgba(44, 207, 152, 0.77) 115.87%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(0, 153, 127, 0.77) 16.95%,
+    rgba(44, 207, 152, 0.77) 115.87%
+  );
+  color: #fff;
+}
+
+.button-link--secondary {
+  box-shadow: 5px 6px 10.5px 0px #d1dee34d;
+}

@@ -1,0 +1,176 @@
+.role-page {
+    --paddingX: clamp(6em, calc(2em + 7vw), 10em);
+    --bg: #eef7fd;
+
+    .banner {
+        background-image:
+            linear-gradient(to bottom, transparent 0%, transparent 70%, var(--bg) 100%),
+            linear-gradient(to left, transparent 0%, transparent 70%, var(--bg) 80%, var(--bg) 100%),
+            url('/images/role/roleBannerBackground.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right, right, right;
+    }
+
+    .banner__content {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        padding: 18em var(--paddingX) 15em;
+        height: 100%;
+
+        & p {
+            line-height: 1.5em;
+            font-size: 1.25em;
+            text-wrap: nowrap;
+        }
+
+        .button-link {
+            display: block;
+            width: max-content;
+            margin-top: 1.5em;
+        }
+    }
+
+    .header {
+        width: 100%;
+        padding: 0 var(--paddingX);
+
+        .header-inner {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header__nav {
+            background-color: rgb(255 255 255 / 50%);
+            backdrop-filter: blur(5px);
+            border-radius: 0.2em;
+            text-wrap: nowrap;
+            margin-left: 2em;
+        }
+    }
+
+    *:empty {
+        margin: 0 !important;
+    }
+
+    .role-name {
+        font-size: 3em;
+        font-weight: 500;
+    }
+
+    .button-link {
+        display: block;
+        width: max-content;
+        margin-top: 3em;
+    }
+
+    .main {
+        padding: 1em var(--paddingX) var(--paddingX);
+        background-image: url('/images/role/roleMainBackground.svg');
+    }
+
+    .role-data {
+        font-size: 1.25em;
+
+        & h1,
+        & h2,
+        & h3,
+        & h4,
+        & h5 {
+            margin: 2em 0 1em 0;
+        }
+
+        & li {
+            list-style-type: disc;
+            list-style-position: inside;
+            line-height: 2em;
+        }
+
+        & p {
+            line-height: 1.5em
+        }
+    }
+
+    .footer {
+        margin-top: 10em;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .icons {
+            display: flex;
+            gap: 1.5em;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .role-page {
+        --paddingX: clamp(2.2em, calc(1em + 5vw), 4em);
+
+        .banner {
+            background-image:
+                linear-gradient(to bottom, transparent 0%, transparent 55%, var(--bg) 70%, var(--bg) 100%),
+                url('/images/role/roleBannerBackgroundMobile.png');
+            background-size: 100%;
+            background-position: top -10vw left 0%;
+
+            .header {
+                margin-top: 5vw;
+            }
+        }
+
+        .banner__content {
+            display: 'flex';
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-bottom: 5em;
+            padding-top: 35vw;
+
+            & p {
+                text-wrap: wrap;
+            }
+        }
+
+        .role-name {
+            font-size: clamp(2.2em, calc(0.5em + 5.5vw), 2.7em);
+        }
+
+        .main {
+            .role-data {
+                font-size: 1.1em;
+
+                & li {
+                    line-height: 1.6em;
+                }
+            }
+
+            .button-link {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        .footer {
+            margin-top: calc(18vw + 1em);
+            flex-direction: column;
+            gap: 1em;
+            text-align: center;
+
+            .icons {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .role-page {
+        .header__nav>* {
+            padding-left: 2vw;
+            padding-right: 2vw;
+        }
+    }
+}

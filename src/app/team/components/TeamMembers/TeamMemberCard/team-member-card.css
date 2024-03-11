@@ -1,0 +1,200 @@
+.team-members-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 16px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-members-card__image-container {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+}
+
+.team-members-card__bio-overlay {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  padding: 88px 24px 48px 24px;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#202020),
+    to(rgba(0, 0, 0, 0))
+  );
+  background-image: -o-linear-gradient(bottom, #202020, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to top, #202020, rgba(0, 0, 0, 0));
+  opacity: 0;
+  transition: opacity 0.5s linear;
+
+  @media (min-width: 1000px) {
+    display: block;
+  }
+}
+
+.team-members-card__bio-overlay p {
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.5;
+  transform: translateY(50%);
+  transition: transform 0.5s ease-out;
+}
+
+.team-members-card__bio-overlay-mobile {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s linear;
+  z-index: 20;
+  background: linear-gradient(
+    180.1deg,
+    rgba(0, 0, 0, 0.5) 0.09%,
+    rgba(0, 0, 0, 0.84) 99.91%
+  );
+
+  @media (min-width: 1000px) {
+    display: none;
+  }
+}
+
+.team-members-card__bio-overlay-mobile-text {
+  padding: 6px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  @media (min-width: 500px) {
+    font-size: 12px;
+  }
+  @media (min-width: 590px) {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+.team-members-card__bio-overlay-mobile--visible {
+  opacity: 1;
+}
+
+.team-members-card__image {
+  max-width: 100%;
+  height: auto;
+  max-height: 530px;
+  object-fit: contain;
+  border-radius: 5px;
+  display: flex;
+}
+
+.team-members-card__image-background {
+  z-index: -1;
+  background: url("/images/team/member_card_bg.png") no-repeat;
+  opacity: 0;
+  transform: opacity 0.3s;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+@media (min-width: 1000px) {
+  .team-members-card:hover .team-members-card__image-container {
+    opacity: 1;
+    box-shadow: 4px 4px 31px 0px #0000000f;
+  }
+
+  .team-members-card:hover .team-members-card__image-background {
+    opacity: 1;
+    box-shadow: 4px 4px 31px 0px #0000000f;
+  }
+
+  .team-members-card:hover .team-members-card__bio-overlay {
+    opacity: 1;
+  }
+  .team-members-card:hover .team-members-card__bio-overlay p {
+    transform: translateY(0);
+  }
+}
+
+.team-members-card__icon {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: 46px;
+  height: 53px;
+  opacity: 0;
+  transform: translateY(150px);
+  transition: transform 0.8s, opacity 0.8s;
+}
+
+.team-members-card__icon img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 1000px) {
+  .team-members-card:hover .team-members-card__icon {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.team-members-card__caption {
+  background-color: #f7fcff;
+  border-radius: 5px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-grow: 2;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  line-height: 1;
+}
+
+.team-members-card__caption-name {
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  @media screen and (min-width: 430px) {
+    font-size: 14px;
+  }
+  @media (min-width: 500px) {
+    font-size: 14px;
+  }
+  @media (min-width: 590px) {
+    font-size: 16px;
+  }
+}
+
+.team-members-card__caption-position {
+  font-size: 10px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.3;
+  @media screen and (min-width: 430px) {
+    font-size: 12px;
+  }
+  @media (min-width: 500px) {
+    font-size: 12px;
+  }
+  @media (min-width: 590px) {
+    font-size: 14px;
+  }
+}
