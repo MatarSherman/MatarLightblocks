@@ -5,11 +5,11 @@
     .banner {
         background-image:
             linear-gradient(to bottom, transparent 0%, transparent 70%, var(--bg) 100%),
-            linear-gradient(to left, transparent 0%, transparent 70%, var(--bg) 80%, var(--bg) 100%),
+            linear-gradient(230deg, transparent 0%, transparent calc(100% - 50em), var(--bg) calc(100% - 35em), var(--bg) 100%),
             url('/images/role/roleBannerBackground.png');
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: right, right, right;
+        background-position-x: right, right, clamp(40%, calc(40% + 22em), calc(110% + 6em));
     }
 
     .banner__content {
@@ -18,6 +18,13 @@
         gap: 2em;
         padding: 18em var(--paddingX) 15em;
         height: 100%;
+
+        > * {
+            width: fit-content;
+            box-shadow: 0px 0px 25px 20px var(--bg);
+            background-color: var(--bg);
+            z-index: 99;
+        }
 
         & p {
             line-height: 1.5em;
@@ -105,7 +112,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 860px) {
     .role-page {
         --paddingX: clamp(2.2em, calc(1em + 5vw), 4em);
 
@@ -128,6 +135,11 @@
             text-align: center;
             padding-bottom: 5em;
             padding-top: 35vw;
+
+            > * {
+                box-shadow: none;
+                background-color: transparent;
+            }
 
             & p {
                 text-wrap: wrap;
