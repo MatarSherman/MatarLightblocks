@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 import "./header.css";
 
-export function Header({ bgIsLoaded, isHomePage = false }) {
+export function Header({ bgIsLoaded, isHomePage = false, hasNavBar=false }) {
   const location = usePathname();
 
   return (
@@ -31,36 +31,39 @@ export function Header({ bgIsLoaded, isHomePage = false }) {
             alt="Lightblocks logo"
           />
         </Link>
-        <nav className="header__nav">
-          <a
-            className="header__nav-link"
-            href={"https://eoracle.io/"}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            eoracle
-          </a>
-          <Link
-            href={"/team"}
-            className={`header__nav-link ${
-              location.pathname === "/team"
+        {
+          !hasNavBar ? null :  
+          <nav className="header__nav">
+            <a
+              className="header__nav-link"
+              href={"https://eoracle.io/"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              eoracle
+            </a>
+            <Link
+              href={"/team"}
+              className={`header__nav-link ${
+                location.pathname === "/team"
+                  ? "header__nav-link--current-page"
+                  : ""
+              }`}
+            >
+              team
+            </Link>
+            <Link
+              href={"/open-roles"}
+              className={`header__nav-link ${
+                location.pathname === "/team"
                 ? "header__nav-link--current-page"
                 : ""
-            }`}
-          >
-            team
-          </Link>
-          <Link
-            href={"/open-roles"}
-            className={`header__nav-link ${
-              location.pathname === "/team"
-                ? "header__nav-link--current-page"
-                : ""
-            }`}
-          >
-            open roles
-          </Link>
-        </nav>
+              }`}
+              >
+              open roles
+            </Link>
+          </nav>
+        }
       </div>
     </header>
   );

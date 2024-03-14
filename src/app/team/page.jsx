@@ -24,10 +24,10 @@ function Team() {
 
         <div className="spacer">
           <div className="team-hiring-cta">
-            <h2>We&apos;re Hiring!</h2>
+            {/* <h2>We&apos;re Hiring!</h2>
             <div>
               Check <Link href="/open-roles">Open Roles</Link>{" "}
-            </div>
+            </div> */}
           </div>
         </div>
       </main>

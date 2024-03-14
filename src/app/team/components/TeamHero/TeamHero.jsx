@@ -18,11 +18,11 @@ export function TeamHero({ isLoaded }) {
             together expertise from various fields to exceed the boundaries of
             blockchain interoperability.
           </p>
-          <div className="team-hero__cta">
+          {/* <div className="team-hero__cta">
             <ButtonLink variant="secondary" href="/open-roles">
               Open roles
             </ButtonLink>
-          </div>
+          </div> */}
         </div>
         <TeamCarousel isLoaded={isLoaded} />
       </div>
