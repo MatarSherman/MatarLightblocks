@@ -10,7 +10,7 @@ export function FirstOfKind() {
       </div>
       <div className="first-of-kind__heading-container">
         <h2 className="first-of-kind__heading">
-          We&apos;re building the first native Ethereum oracle
+          We&apos;re building<br/> the first native<br/> Ethereum oracle
         </h2>
       </div>
     </section>

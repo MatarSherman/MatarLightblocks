@@ -11,6 +11,7 @@ body {
   --max-width: 1440px;
   --color-off-white: rgba(238, 247, 253, 1);
   --color-off-white-transparent: rgba(238, 247, 253, 0);
+  --color-primary: #19af96;
 }
 
 * {

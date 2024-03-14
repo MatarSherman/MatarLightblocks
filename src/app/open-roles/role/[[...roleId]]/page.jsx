@@ -13,11 +13,19 @@ export default async function Page({ params }) {
         <div className="banner__content">
           <h1 className="role-name">{role.title}</h1>
           <p>
-            Join us on the mission to build a global, permissionless, and<br />
-            crypto-economically secure data and computation marketplace.<br />
-            <strong>As our team expands, we welcome those who share our  values.</strong>
+            Join us on the mission to build a global,
+            <br className="mobile" /> permissionless, and{" "}
+            <br className="desktop" />
+            crypto-economically
+            <br className="mobile" /> secure data and computation marketplace
           </p>
-          <ButtonLink href={"/"} isFullWidth={false}>Apply Now</ButtonLink>
+          <ButtonLink
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdxNtVK9MK7HlBC4zYpqFEo4TcDpJ0IliBU_U3MdvtOM-9gpQ/viewform"
+            isExternal={true}
+            isFullWidth={false}
+          >
+            Apply now
+          </ButtonLink>
         </div>
       </div>
       <div className="main">
@@ -25,8 +33,19 @@ export default async function Page({ params }) {
           className="role-data"
           dangerouslySetInnerHTML={{ __html: role.html }}
         />
-        <ButtonLink href={"/"} isFullWidth={false}>Apply Now</ButtonLink>
-        <div className="footer">
+        <div className="role-page__cta">
+          <ButtonLink
+            href={
+              "https://docs.google.com/forms/d/e/1FAIpQLSdxNtVK9MK7HlBC4zYpqFEo4TcDpJ0IliBU_U3MdvtOM-9gpQ/viewform"
+            }
+            isExternal={true}
+            isFullWidth={false}
+          >
+            Apply now
+          </ButtonLink>
+        </div>
+        {/* temporarly removed */}
+        {/* <div className="footer">
           ©️ 2024 Lightblocks. All rights reserved.
           <div className="icons">
             <img src={'/images/role/X.svg'} />
@@ -35,7 +54,7 @@ export default async function Page({ params }) {
             <img src={'/images/role/discord.svg'} />
             <img src={'/images/role/github.svg'} />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

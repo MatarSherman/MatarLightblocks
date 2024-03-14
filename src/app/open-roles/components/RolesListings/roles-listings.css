@@ -1,16 +1,28 @@
 .roles-listings {
   max-width: var(--max-width);
-  margin: auto;
-  padding: 16px;
-  min-height: 100vh;
+  padding: 0 0 16px 0;
+  padding-bottom: 160px;
   @media (min-width: 768px) {
-    padding: 16px 100px;
+    padding: 16px 0 160px 0;
+  }
+  @media (min-width: 1173px) {
+    padding: 16px 0 160px 0;
+  }
+  @media (min-width: 1570px) {
+    padding: 16px 0;
+    padding-bottom: 160px;
   }
 }
 
 .roles-listings__heading {
+  font-size: 24px;
   text-align: center;
-  padding-bottom: 32px;
+  font-weight: 600;
+  padding-bottom: 48px;
+  @media (min-width: 768px) {
+    text-align: left;
+    font-size: 32px;
+  }
 }
 
 .category-list {
@@ -30,6 +42,9 @@
   display: flex;
   align-items: center;
   width: 100%;
+  @media (min-width: 768px) {
+    padding: 24px 32px;
+  }
 }
 
 .role-category__trigger-button:hover {
@@ -70,9 +85,5 @@
 .role-category__content a {
   color: #00997f;
   font-weight: 600;
-  text-decoration: underline;
-}
-
-.role-category__content a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }

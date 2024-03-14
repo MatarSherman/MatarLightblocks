@@ -118,7 +118,7 @@
   transform: translateY(140px);
 }
 
-.spacer {
+.team-hiring-cta {
   height: calc(100vh - calc(500px));
   @media (min-width: 550px) {
     height: calc(100vh - calc(600px));
@@ -132,4 +132,32 @@
   @media (min-width: 1000px) {
     height: calc(100vh - calc(770px));
   }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 120px 0;
+  padding-top: 160px;
+  text-align: center;
+}
+
+.team-hiring-cta h2 {
+  font-size: 44px;
+  font-weight: 600;
+  @media (min-width: 768px) {
+    font-size: 64px;
+  }
+}
+
+.team-hiring-cta div {
+  font-size: 26px;
+  font-weight: 600;
+  @media (min-width: 768px) {
+    font-size: 48px;
+  }
+}
+
+.team-hiring-cta a {
+  color: var(--color-primary);
+  text-decoration: none;
 }

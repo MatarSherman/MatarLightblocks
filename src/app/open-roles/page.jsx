@@ -5,18 +5,17 @@ import { FirstOfKind } from "@/app/open-roles/components/FirstOfKind/FirstOfKind
 import { RolesLife } from "@/app/open-roles/components/RolesLife/RolesLife";
 import { RolesAssessment } from "@/app/open-roles/components/RolesAssessment/RolesAssessment";
 import { RolesListings } from "@/app/open-roles/components/RolesListings/RolesListings";
+import './open-roles.css'
 
 export default function Page() {
   return (
-    <>
+    <div className="open-roles-page">
       <Header />
-      <main>
-        <OpenRolesHero />
-        <FirstOfKind />
-        <RolesAssessment />
-        <RolesLife />
-        <RolesListings />
-      </main>
-    </>
+      <OpenRolesHero />
+      <FirstOfKind />
+      <RolesAssessment />
+      <RolesLife />
+      <RolesListings />
+    </div>
   );
 }

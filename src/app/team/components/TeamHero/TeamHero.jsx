@@ -1,3 +1,4 @@
+import { ButtonLink } from "@/app/shared/components/ButtonLink/ButtonLink";
 import { TeamCarousel } from "./TeamCarousel/TeamCarousel";
 
 import "./team-hero.css";
@@ -17,6 +18,11 @@ export function TeamHero({ isLoaded }) {
             together expertise from various fields to exceed the boundaries of
             blockchain interoperability.
           </p>
+          <div className="team-hero__cta">
+            <ButtonLink variant="secondary" href="/open-roles">
+              Open roles
+            </ButtonLink>
+          </div>
         </div>
         <TeamCarousel isLoaded={isLoaded} />
       </div>

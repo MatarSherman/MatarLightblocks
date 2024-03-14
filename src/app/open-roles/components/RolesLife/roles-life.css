@@ -1,27 +1,31 @@
 .roles-life {
-  max-width: 1600px;
-  margin: auto;
   padding-top: 40px;
-  padding-bottom: 40px;
+  /* padding-bottom: 40px; */
+  /* transform: translateX(calc(-25% + 3em)); */
+  @media (min-width: 768px) {
+    transform: translateX(calc(-7em + 8%));
+  }
 }
 
 .roles-life__inner {
   display: grid;
   grid-template-columns: 1fr;
-  padding: 0 16px;
+  padding: 0;
   @media (min-width: 768px) {
+    gap: max(calc(20% - 10em), 0px);
     grid-template-columns: 1fr 1fr;
-    gap: 32px;
   }
 }
 
 .roles-life__text {
   text-align: center;
+  z-index: 1;
   @media (min-width: 768px) {
     text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: -20px;
   }
 }
 
@@ -29,60 +33,52 @@
   font-size: 24px;
   font-weight: 600;
   padding-bottom: 24px;
+  text-wrap: nowrap;
+  font-size: max(0.5em + 3.25vw, 22px);
   @media (min-width: 768px) {
     font-size: 32px;
+    font-size: clamp(38px, 3.5vw, 42px);
   }
 }
 
 .roles-life__paragraph {
-  padding-bottom: 24px;
+  /* padding-bottom: 24px; */
   line-height: 25.6px;
+  /* line-height: max(1.4vw, 2em); */
+  line-height: 1.75em;
   letter-spacing: -0.02em;
-  max-width: 495px;
-  margin: auto;
+  text-wrap: nowrap;
+  margin-bottom: -15vw;
+  font-size: calc(max(0.5em + 3.25vw, 22px) * 0.55);
   @media (min-width: 768px) {
     margin: 0;
+    font-size: calc(clamp(38px, 4.65vw, 46px) * 0.4);
   }
 }
 
 .roles-life__video-container {
-  width: 100%;
-  max-width: 300px;
-  margin: auto;
-  height: 200px;
-  overflow: hidden;
   position: relative;
-  justify-self: center;
+  @media (min-width: 768px) {
+    order: -1;
+    width: calc(30vw + 11em);
+  }
+}
+
+.roles-life__video-container:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: radial-gradient(
     50% 50% at 50% 50%,
     rgba(238, 247, 253, 0) 58.66%,
     #eef7fd 100%
   );
-  @media (min-width: 500px) {
-    height: 300px;
-    max-width: 420px;
-  }
-  @media (min-width: 768px) {
-    height: 400px;
-    margin: 0;
-    order: -1;
-    max-width: 550px;
-  }
-  @media (min-width: 1200px) {
-    max-width: 100%;
-    width: 750px;
-  }
 }
 
 .roles-life__video {
-  width: 100%;
-  height: auto;
-  position: absolute;
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  @media (min-width: 1200px) {
-    width: 100%;
-  }
+  max-width: 100%;
+  max-height: 100%;
 }

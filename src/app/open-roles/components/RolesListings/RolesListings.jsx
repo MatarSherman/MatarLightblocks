@@ -5,19 +5,19 @@ import "./roles-listings.css";
 import roles from "../../roleData.json";
 import Link from "next/link";
 
-export function RolesListings() {
-  const tags = roles.reduce((acc, role) => {
-    if (!acc.includes(role.tags[0].name)) {
-      acc.push(role.tags[0].name);
-    }
-    return acc;
-  }, []);
+// had to duplicate this from fetchRoleData.js as it's a different type of module
+export const ALLOWED_CATEGORIES = [
+  "Engineering",
+  "Product & Research",
+  "Marketing",
+];
 
+export function RolesListings() {
   return (
     <section id="rolesListings" className="roles-listings">
       <h2 className="roles-listings__heading">Open Roles</h2>
       <Accordion.Root collapsible className="category-list">
-        {tags.map((tag, i) => {
+        {ALLOWED_CATEGORIES.map((tag, i) => {
           return (
             <Accordion.Item
               className="AccordionItem"
@@ -33,7 +33,6 @@ export function RolesListings() {
                 <ul className="role-category__content">
                   {roles
                     .filter((role) => {
-                      console.log({ role });
                       return role.tags[0].name === tag;
                     })
                     .map((role, i) => {

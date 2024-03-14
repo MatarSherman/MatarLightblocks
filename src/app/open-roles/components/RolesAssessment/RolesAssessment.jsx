@@ -14,7 +14,7 @@ export function RolesAssessment() {
       <div className="roles-assessment__inner">
         <div className="roles-assessment__heading-container">
           <h2 className="roles-assessment__heading">
-            Interviewing & Assessment
+            Interviewing & <br />Assessment
           </h2>
           <ApplicationStages isDesktop />
         </div>

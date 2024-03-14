@@ -36,3 +36,21 @@ export function ButtonLink({
     </Link>
   );
 }
+
+export function ButtonLinkOnPage({
+  href,
+  children,
+  variant = "primary",
+  isFullWidth = false,
+  handleClick,
+}) {
+  const classList = `button-link ${buttonVariants[variant]} ${
+    isFullWidth ? "button-link--full-width" : ""
+  }`;
+
+  return (
+    <a href={href} className={classList} onClick={handleClick}>
+      {children}
+    </a>
+  );
+}

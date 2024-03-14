@@ -1,23 +1,21 @@
 .open-roles-hero {
-  max-width: 2400px;
-  margin: auto;
+  width: 100%;
+  max-width: initial !important;
   overflow-x: hidden;
   position: relative;
 }
 
 .open-roles-hero__inner {
   background-image: url("./assets/open_roles_hero_bg.png");
-  background-position: center;
+  background-position: 50% 105%;
   padding-top: 120px;
   padding-bottom: 40px;
-  max-width: var(--max-width);
   margin: auto;
   position: relative;
   overflow-y: clip;
   @media (min-width: 768px) {
+    max-width: var(--section-width);
     padding: 250px 0 200px 0;
-  }
-  @media (min-width: 768px) {
     background-image: none;
     justify-content: center;
   }
@@ -91,7 +89,6 @@
 }
 
 .open-roles-hero__text-content {
-  padding: 0 16px;
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr;
@@ -100,43 +97,38 @@
   z-index: 2;
 
   @media (min-width: 768px) {
-    padding: 0 32px;
     justify-items: start;
-  }
-  @media (min-width: 1024px) {
-    padding: 0 48px;
-  }
-  @media (min-width: 1200px) {
-    padding: 0 100px;
   }
 }
 
 .open-roles-hero__text-container {
   text-align: center;
-  max-width: 400px;
   @media (min-width: 768px) {
-    max-width: 607px;
     text-align: left;
   }
 }
 
 .open-roles-hero__heading {
-  font-size: 24px;
+  font-size: clamp(1.35em, 5.5vw, 2.5em);
   font-weight: 600;
   line-height: 1.3;
   margin-bottom: 24px;
+  text-wrap: nowrap;
   @media (min-width: 768px) {
-    font-size: 48px;
+    font-size: clamp(42px, 4.5vw ,48px);
     justify-content: center;
   }
 }
 
-.open-roles-hero__heading-br {
+.open-roles-hero__heading-br-desktop {
   display: none;
   @media (min-width: 768px) {
     display: block;
   }
-  @media (min-width: 822px) {
+}
+.open-roles-hero__heading-br-mobile {
+  display: block;
+  @media (min-width: 768px) {
     display: none;
   }
 }
@@ -151,8 +143,10 @@
 
 .open-roles-hero__paragraph {
   line-height: 1.6;
+  font-size: clamp(0.85em, 3vw, 1.5em);
+  text-wrap: nowrap;
   @media (min-width: 768px) {
-    font-size: 20px;
+    font-size: clamp(18px, 2.3vw, 20px);
   }
 }
 
@@ -160,6 +154,12 @@
   display: none;
   @media (min-width: 768px) {
     display: block;
+  }
+}
+.open-roles-hero__p-br-mobile {
+  display: block;
+  @media (min-width: 768px) {
+    display: none;
   }
 }
 

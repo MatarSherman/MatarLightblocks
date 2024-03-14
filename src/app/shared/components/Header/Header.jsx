@@ -1,34 +1,18 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import "./header.css";
 
-export function Header({ bgIsLoaded, isHomePage = false, isNavbar = false }) {
+export function Header({ bgIsLoaded, isHomePage = false }) {
   const location = usePathname();
-  // const [prevScrollPos, setPrevScrollPos] = useState(0);
-  // const [scrolled, setScrolled] = useState(false);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const currentScrollPos = window.pageYOffset;
-  //     setScrolled(currentScrollPos > 100);
-  //     setPrevScrollPos(currentScrollPos);
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, [prevScrollPos]);
 
   return (
     <header
-      className={`header ${isHomePage && !bgIsLoaded ? "header--bg-is-loading" : ""
-        }`}
-    // className={`header ${scrolled ? "header--top" : ""}`}
+      className={`header ${
+        isHomePage && !bgIsLoaded ? "header--bg-is-loading" : ""
+      }`}
     >
       <div className="header-inner">
         <Link href={"/"}>
@@ -47,27 +31,36 @@ export function Header({ bgIsLoaded, isHomePage = false, isNavbar = false }) {
             alt="Lightblocks logo"
           />
         </Link>
-        {
-          !isNavbar ? null :
-            <nav className="header__nav">
-              <a
-                className="header__nav-link"
-                href={"https://eoracle.io/"}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                eoracle
-              </a>
-              <Link
-                href={"/team"}
-                className={`header__nav-link ${location.pathname === "/team" ? "active" : ""
-                  }`}
-              >
-                team
-              </Link>
-              <span className="header__roles-text">open roles</span>
-            </nav>
-        }
+        <nav className="header__nav">
+          <a
+            className="header__nav-link"
+            href={"https://eoracle.io/"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            eoracle
+          </a>
+          <Link
+            href={"/team"}
+            className={`header__nav-link ${
+              location.pathname === "/team"
+                ? "header__nav-link--current-page"
+                : ""
+            }`}
+          >
+            team
+          </Link>
+          <Link
+            href={"/open-roles"}
+            className={`header__nav-link ${
+              location.pathname === "/team"
+                ? "header__nav-link--current-page"
+                : ""
+            }`}
+          >
+            open roles
+          </Link>
+        </nav>
       </div>
     </header>
   );

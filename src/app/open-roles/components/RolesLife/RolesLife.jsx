@@ -9,9 +9,9 @@ export function RolesLife() {
         <div className="roles-life__text">
           <h2 className="roles-life__heading">Life at Lightblocks</h2>
           <p className="roles-life__paragraph">
-            At lightblocks, we are values driven. We embrace a culture where
-            everyone is included, and provide an environment to help develop
-            each team member&apos;s unique contribution towards our missions.
+            At lightblocks, we are values driven. We embrace <br />
+            a culture where everyone is included, and provide <br />an environment 
+            to help develop each team member&apos;s <br />unique contribution towards our missions. 
           </p>
         </div>
         <div className="roles-life__video-container">

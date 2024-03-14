@@ -12,6 +12,8 @@
   font-weight: 500;
   line-height: 17px;
   letter-spacing: -0.03em;
+  display: flex;
+  align-items: center;
   @media (min-width: 430px) {
     font-size: 16px;
     padding: 18px 20px;
@@ -52,4 +54,25 @@
 
 .button-link--secondary {
   box-shadow: 5px 6px 10.5px 0px #d1dee34d;
+}
+
+.button-link__chevron-down,
+.button-link__chevron-down-animated {
+  margin-left: 18px;
+}
+
+.button-link__chevron-down-animated {
+  animation: float ease 1s infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
