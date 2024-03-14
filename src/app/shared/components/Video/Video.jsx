@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import { browserName } from "react-device-detect";
 import './video.css'
 
-export function useBrowserID() {
+export function useBrowserID(isSkip) {
+  if (isSkip) return false;
   const browserString = browserName;
   const isSafari = browserString.toLowerCase().includes("safari");
   return { isSafari };
@@ -12,7 +13,7 @@ export function useBrowserID() {
 
 export function Video({ className='', src, alt = "", isSmoothLoad, skipSafariCheck, setBgIsLoaded }) {
   const [videoSrc, setVideoSrc] = useState("");
-  const { isSafari } = skipSafariCheck ? false : useBrowserID();
+  const { isSafari } = useBrowserID(skipSafariCheck);
   const [isLoaded, setIsLoaded] = useState(!isSmoothLoad);
 
   // this is needed to make sure the onPlay event listener is initialized before the video starts playing
