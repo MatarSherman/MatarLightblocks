@@ -120,7 +120,9 @@
   z-index: 2;
   background: 
     linear-gradient(to left, transparent 90%, #eef7fd),
-    linear-gradient(to top, transparent 90%, #eef7fd);
+    linear-gradient(to top, transparent 90%, #eef7fd),
+    linear-gradient(to bottom, transparent 70%, #eef7fd),
+    linear-gradient(to right, transparent 70%, #eef7fd 80%);
 }
 
 .bg-video-container > video {
