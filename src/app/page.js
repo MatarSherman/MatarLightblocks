@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import { Header } from "@/app/shared/components/Header/Header";
 import { ButtonLink } from "@/app/shared/components/ButtonLink/ButtonLink";
-import { Video } from "@/app/shared/components/Video";
+import { Video } from "@/app/shared/components/Video/Video";
 
 import "./home.css";
 
@@ -51,6 +51,7 @@ export default function Home() {
         </div>
         <div className="bg-video-container">
           <Video
+            isSmoothLoad={true}
             setBgIsLoaded={setBgIsLoaded}
             src="/video/hero_bg.mp4"
           />

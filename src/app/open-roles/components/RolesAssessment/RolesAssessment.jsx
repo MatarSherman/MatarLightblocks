@@ -1,4 +1,4 @@
-import { Video } from "@/app/shared/components/Video";
+import { Video } from "@/app/shared/components/Video/Video";
 import {
   ApplicationIcon,
   EvaluationIcon,

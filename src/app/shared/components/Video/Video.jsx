@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 
 import { browserName } from "react-device-detect";
+import './video.css'
 
 export function useBrowserID() {
   const browserString = browserName;
@@ -9,9 +10,10 @@ export function useBrowserID() {
   return { isSafari };
 }
 
-export function Video({ className, src, alt = "", setBgIsLoaded }) {
+export function Video({ className='', src, alt = "", isSmoothLoad, setBgIsLoaded }) {
   const [videoSrc, setVideoSrc] = useState("");
   const { isSafari } = useBrowserID();
+  const [isLoaded, setIsLoaded] = useState(!isSmoothLoad);
 
   // this is needed to make sure the onPlay event listener is initialized before the video starts playing
   // otherwise the event never fires and text stays hidden
@@ -30,8 +32,11 @@ export function Video({ className, src, alt = "", setBgIsLoaded }) {
     />
   ) : (
     <video
-      className={className}
+      className={`${className} ${isSmoothLoad ? 'smooth-load-video' : ''} ${isLoaded ? 'loaded-video' : 'loading-video'}`}
       onPlay={() => {
+        if (!isLoaded) {
+          setIsLoaded(true)
+        }
         setBgIsLoaded?.(true);
       }}
       autoPlay

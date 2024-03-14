@@ -1,0 +1,11 @@
+.smooth-load-video {
+  transition: opacity ease 0.3s;
+}
+
+.loading-video {
+  opacity: 0
+}
+
+.loaded-video {
+  opacity: 1;
+}
