@@ -85,7 +85,6 @@
 }
 
 .bg-video-container {
-  --video-width: 100%;
   position: absolute;
   right: max(calc(-80em + 60vw), -28em);
   right: calc(max(calc((-86em + 60vw) * 1), -38em));
@@ -99,14 +98,8 @@
   align-items: center;
   isolation: isolate;
 
-  
-
-  @media (max-width: 1140px) {
-    right: calc(-30vw);
-    --video-width: calc(175vw - 50em);
-  }
-  @media (max-width: 1023px) {
-    --video-width: 100vw;
+  @media (max-width: 1300px) {
+    right: max(calc(-47vw + 2.5em), calc(-50vw + 5.5em));
   }
 }
 
@@ -129,7 +122,13 @@
   position: relative;
   max-height: 100%;
   max-width: 100%;
-  width: var(--video-width);
+  width: 100%;
+  @media (max-width: 1300px) {
+    width: calc(212vw - 58.5em);
+  }
+  @media (max-width: 1023px) {
+    width: 100vw;
+  }
 }
 
 @media (max-width: 1023px) {
