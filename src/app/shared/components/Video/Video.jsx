@@ -10,9 +10,9 @@ export function useBrowserID() {
   return { isSafari };
 }
 
-export function Video({ className='', src, alt = "", isSmoothLoad, setBgIsLoaded }) {
+export function Video({ className='', src, alt = "", isSmoothLoad, skipSafariCheck, setBgIsLoaded }) {
   const [videoSrc, setVideoSrc] = useState("");
-  const { isSafari } = useBrowserID();
+  const { isSafari } = skipSafariCheck ? false : useBrowserID();
   const [isLoaded, setIsLoaded] = useState(!isSmoothLoad);
 
   // this is needed to make sure the onPlay event listener is initialized before the video starts playing
