@@ -88,8 +88,11 @@
   --video-width: 100%;
   position: absolute;
   right: max(calc(-80em + 60vw), -28em);
+  right: calc(max(calc((-80em + 60vw) * 2.5), -38em));
   width: 1414px;
   height: 720px;
+  height: calc(720px * (1 + (1/1.75)));
+  width: calc(1414px * (1 + (1/1.75)));
   top: 20%;
   display: flex;
   justify-content: right;
