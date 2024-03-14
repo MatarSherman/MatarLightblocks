@@ -53,7 +53,7 @@ export default function Home() {
           <Video
             isSmoothLoad={true}
             setBgIsLoaded={setBgIsLoaded}
-            src="/video/hero_bg.mp4"
+            src="/video/hero_bg_big.mp4"
           />
         </div>
         {/* <div className="home-hero__background-video-container">
