@@ -50,7 +50,7 @@ export function Header({ bgIsLoaded, isHomePage = false, hasNavBar=false }) {
                   : ""
               }`}
             >
-              team
+              Team
             </Link>
             <Link
               href={"/open-roles"}
@@ -60,7 +60,7 @@ export function Header({ bgIsLoaded, isHomePage = false, hasNavBar=false }) {
                 : ""
               }`}
               >
-              open roles
+              Open roles
             </Link>
           </nav>
         }
