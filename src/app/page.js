@@ -7,6 +7,7 @@ import { ButtonLink } from "@/app/shared/components/ButtonLink/ButtonLink";
 import { Video } from "@/app/shared/components/Video/Video";
 
 import "./home.css";
+import Spline from "@splinetool/react-spline";
 
 export default function Home() {
   const [screenWidth, setScreenWidth] = useState(null);
@@ -49,13 +50,20 @@ export default function Home() {
             </ButtonLink>
           </div>
         </div>
-        <div className="bg-video-container">
+        <div className="spline-container">
+          <Spline
+            onLoad={() => setBgIsLoaded(true)}
+            scene="https://prod.spline.design/HqSf7rPpP36sTtlR/scene.splinecode"
+          />
+        </div>
+
+        {/* <div className="bg-video-container">
           <Video
             isSmoothLoad={true}
             setBgIsLoaded={setBgIsLoaded}
             src="/video/hero_bg_big.mp4"
           />
-        </div>
+        </div> */}
         {/* <div className="home-hero__background-video-container">
           <div
             className={`bg-overlay `}
