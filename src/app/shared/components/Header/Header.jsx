@@ -2,18 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
 import "./header.css";
 
-export function Header({ bgIsLoaded, isHomePage = false, hasNavBar=false }) {
-  const location = usePathname();
+export function Header({ isHomePage = false, hasNavBar = true }) {
+  const path = usePathname();
 
   return (
-    <header
-      className={`header ${
-        isHomePage && !bgIsLoaded ? "header--bg-is-loading" : ""
-      }`}
-    >
+    <header className={`header ${isHomePage ? "header--bg-is-loading" : ""}`}>
       <div className="header-inner">
         <Link href={"/"}>
           <img
@@ -31,12 +26,11 @@ export function Header({ bgIsLoaded, isHomePage = false, hasNavBar=false }) {
             alt="Lightblocks logo"
           />
         </Link>
-        {
-          !hasNavBar ? null :  
+        {!hasNavBar ? null : (
           <nav className="header__nav">
             <a
               className="header__nav-link"
-              href={"https://eoracle.io/"}
+              href="https://www.eoracle.io/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -45,25 +39,25 @@ export function Header({ bgIsLoaded, isHomePage = false, hasNavBar=false }) {
             <Link
               href={"/team"}
               className={`header__nav-link ${
-                location.pathname === "/team"
+                path?.startsWith("/team")
                   ? "header__nav-link--current-page"
                   : ""
               }`}
             >
               Team
             </Link>
-            <Link
+            {/* <Link
               href={"/open-roles"}
               className={`header__nav-link ${
-                location.pathname === "/team"
-                ? "header__nav-link--current-page"
-                : ""
+                path?.startsWith("/open-roles")
+                  ? "header__nav-link--current-page"
+                  : ""
               }`}
-              >
+            >
               Open roles
-            </Link>
+            </Link> */}
           </nav>
-        }
+        )}
       </div>
     </header>
   );

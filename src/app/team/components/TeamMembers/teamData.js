@@ -102,4 +102,41 @@ export const teamData = [
     description:
       "Managing employee relations, ensuring laws compliance and fostering a supportive and comfortable work environment.",
   },
+  {
+    imageFilename: "alon_profile",
+    name: "Alon Chayet",
+    position: "Researcher",
+    description: "Bachelor's degree in computer science and mathematics. Interested in game theory, distributed systems, and blockchain technologies in particular. Intrigued by the intersection of abstract theoretical concepts with real-world problems.",
+  },
+  {
+    imageFilename: "sergei_profile",
+    name: "Sergei Liakh",
+    position: "Blockchain Developer",
+    description: "Sergei is a software developer with 15 years of experience in crafting diverse software products. His passion currently lies in smart contracts and DeFi. Holding a master's degree in applied mathematics, he brings a deep understanding of the mathematical principles underpinning his work",
+  },
+  {
+    imageFilename: "marios_profile",
+    name: "Marios Aronis",
+    position: "DevOps Engineer",
+    description:
+      "Holds a diploma in microelectronics and nano-sensors engineering, but is passionate about building reliable cloud infrastructures and efficiently automating software delivery processes. Has more than 5 years of SRE/DevOps experience within the shipping and blockchain spaces.",
+  },
+  {
+    imageFilename: "ehsan_profile",
+    name: "Ehsan Saradar",
+    position: "Blockchain Developer",
+    description: "Ehsan is a software engineer with 10 years of software and 4 years of blockchain development experiences. He is the Director of Blockchain & Transactive Energy at IEMS Solutions. He has a solid skillset in designing and developing micro-services and distributed services. He is most interested in different distributed ledger technologies such as blockchain and contributed to different projects such as Cosmos, THORChain, THORSwap, Osmosis and etc.",
+  },
+  {
+    imageFilename: "heinrich_profile",
+    name: "Heinrich Tessendorf",
+    position: "Content & Community manager",
+    description: "Hands-on content & community manager fueled by a passion for blockchain's potential and building bridges between the community and innovative projects.",
+  },
+  {
+    imageFilename: "tetiana_profile",
+    name: "Tetiana Afonina",
+    position: "Senior Blockchain Engineer",
+    description: "5+ years of experience in Blockchain technologies and 15+ in Software engineering. Extensive expertise in the areas of stable coins, security tokens, lending and staking protocols, DIDs and compliance tools design and development. Led the full lifecycle development of various DeFi products, overseeing everything from conceptualization to implementation and deployment with a strong emphasis on security and optimization",
+  },
 ];

@@ -1,6 +1,4 @@
-import { ButtonLink } from "@/app/shared/components/ButtonLink/ButtonLink";
 import { TeamCarousel } from "./TeamCarousel/TeamCarousel";
-
 import "./team-hero.css";
 
 export function TeamHero({ isLoaded }) {

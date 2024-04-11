@@ -1,7 +1,7 @@
+"use client"
+
 import { useState } from "react";
-
 import { TeamMemberCard } from "./TeamMemberCard/TeamMemberCard";
-
 import { teamData } from "./teamData";
 
 export function TeamMembersListMobile() {

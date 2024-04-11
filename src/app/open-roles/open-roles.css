@@ -1,30 +1,14 @@
 .open-roles-page {
-  --section-width: calc(65% + 8em);
+  --section-width: calc(70% + 8em);
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     --section-width: calc(65% + 5em);
   }
 }
 
-@media (max-width: 768px) {
-  .header__nav-link {
-    padding: 0;
-  }
-
-  .header__nav {
-    padding: 1em;
-    gap: 1em;
-  }
-}
-
-.open-roles-page .header-inner {
-  padding: 0;
-}
-
 .open-roles-page>* {
-  /* border: solid 1px red; */
   width: 100%;
   max-width: var(--section-width);
 }

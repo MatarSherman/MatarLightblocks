@@ -2,6 +2,7 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "removeComments": true // You could enable it depending on the env variable, For example, if you are in production mode: process.env.NODE_ENV === "production".
   }
 }

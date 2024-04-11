@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+"use client";
 
+import { useEffect, useState } from "react";
 import { browserName } from "react-device-detect";
 
 export function useBrowserID() {
@@ -8,7 +9,7 @@ export function useBrowserID() {
   return { isSafari };
 }
 
-export function Video({ className, src, alt = "", setBgIsLoaded }) {
+export function Video({ className, src, alt = "", setBgIsLoaded, onEnded, loop=true, videoType }) {
   const [videoSrc, setVideoSrc] = useState("");
   const { isSafari } = useBrowserID();
 
@@ -33,12 +34,14 @@ export function Video({ className, src, alt = "", setBgIsLoaded }) {
       onPlay={() => {
         setBgIsLoaded?.(true);
       }}
+      onEnded={onEnded}
       autoPlay
       muted
-      loop
+      loop={loop}
       playsInline
+      disablePictureInPicture
     >
-      {videoSrc && <source src={videoSrc} type="video/mp4" />}
+      {videoSrc && <source src={videoSrc} type={videoType || "video/mp4"} />}
     </video>
   );
 }

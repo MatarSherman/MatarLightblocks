@@ -101,7 +101,7 @@
 
 .team-members-card__image-background {
   z-index: -1;
-  background: url("/images/team/member_card_bg.png") no-repeat;
+  /* background: url("/images/team/member_card_bg.jpg") no-repeat; */
   opacity: 0;
   transform: opacity 0.3s;
   background-size: cover;

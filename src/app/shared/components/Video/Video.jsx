@@ -11,7 +11,7 @@ export function useBrowserID(isSkip) {
   return { isSafari };
 }
 
-export function Video({ className='', src, alt = "", isSmoothLoad, skipSafariCheck, setBgIsLoaded }) {
+export function Video({ className='', src, alt = "", isSmoothLoad, skipSafariCheck=false, setBgIsLoaded }) {
   const [videoSrc, setVideoSrc] = useState("");
   const { isSafari } = useBrowserID(skipSafariCheck);
   const [isLoaded, setIsLoaded] = useState(!isSmoothLoad);

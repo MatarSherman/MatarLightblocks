@@ -1,55 +1,58 @@
-import { forwardRef } from "react";
-import * as Accordion from "@radix-ui/react-accordion";
+"use client";
 
+import { Suspense, forwardRef } from "react";
+import * as Accordion from "@radix-ui/react-accordion";
 import "./roles-listings.css";
 import roles from "../../roleData.json";
 import Link from "next/link";
+import Script from "next/script";
 
-// had to duplicate this from fetchRoleData.js as it's a different type of module
-export const ALLOWED_CATEGORIES = [
-  "Engineering",
-  "Product & Research",
-  "Marketing",
-];
-
-export function RolesListings() {
+export function RolesListings({ departments }) {
   return (
     <section id="rolesListings" className="roles-listings">
-      <h2 className="roles-listings__heading">Open Roles</h2>
-      <Accordion.Root collapsible className="category-list">
-        {ALLOWED_CATEGORIES.map((tag, i) => {
-          return (
-            <Accordion.Item
-              className="AccordionItem"
-              value={`item-${i + 1}`}
-              key={`item-${i + 1}`}
-            >
-              <AccordionTrigger>
-                <span className="role-category__trigger-button-text">
-                  {tag}
-                </span>
-              </AccordionTrigger>
-              <AccordionContent asChild>
-                <ul className="role-category__content">
-                  {roles
-                    .filter((role) => {
-                      return role.tags[0].name === tag;
-                    })
-                    .map((role, i) => {
+      {/* <h2 className="roles-listings__heading">Open Roles</h2> */}
+      {/* <div id="grnhse_app"></div> */}
+
+      {/* <iframe
+        style={{ display: "none" }}
+        width={0}
+        height={0}
+        src={
+          <Script src="https://boards.greenhouse.io/embed/job_board/js?for=lightblocks"></Script>
+        }
+      /> */}
+      {/* <Accordion.Root collapsible className="category-list">
+        {departments
+          .filter((dep) => dep.jobs.length > 0)
+          .map((dep) => {
+            return (
+              <Accordion.Item
+                className="AccordionItem"
+                value={`item-${dep.id}`}
+                key={`item-${dep.id}`}
+              >
+                <AccordionTrigger>
+                  <span className="role-category__trigger-button-text">
+                    {dep.name}
+                  </span>
+                </AccordionTrigger>
+                <AccordionContent asChild>
+                  <ul className="role-category__content">
+                    {dep.jobs.map((job) => {
                       return (
-                        <li key={`eng_listing_${i}`}>
-                          <Link href={`/open-roles/role/${role.id}`}>
-                            {role.title}
+                        <li key={`eng_listing_${job.id}`}>
+                          <Link href={`/open-roles/role/${job.id}`}>
+                            {job.title}
                           </Link>
                         </li>
                       );
                     })}
-                </ul>
-              </AccordionContent>
-            </Accordion.Item>
-          );
-        })}
-      </Accordion.Root>
+                  </ul>
+                </AccordionContent>
+              </Accordion.Item>
+            );
+          })}
+      </Accordion.Root> */}
     </section>
   );
 }

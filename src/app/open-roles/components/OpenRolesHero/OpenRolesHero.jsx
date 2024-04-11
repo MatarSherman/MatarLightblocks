@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from "react";
 import Image from "next/image";
 
 import { ButtonLinkOnPage } from "@/app/shared/components/ButtonLink/ButtonLink";
@@ -6,6 +9,8 @@ import "./open-roles-hero.css";
 import { useLenis } from "@studio-freight/react-lenis";
 
 export function OpenRolesHero() {
+  const [isReadMore, setIsReadMore] = useState(false);
+
   const lenis = useLenis();
   function scrollToRolesListings(event) {
     lenis.scrollTo("#rolesListings");
@@ -27,20 +32,35 @@ export function OpenRolesHero() {
         <div className="open-roles-hero__text-content">
           <div className="open-roles-hero__text-container">
             <h1 className="open-roles-hero__heading">
-              Build innovative <br className="open-roles-hero__heading-br-desktop"/>
-              solutions for <br className="open-roles-hero__heading-br-mobile"/>dApps{" "}
-              <span className="open-roles-hero__with-us">(with us)</span>
+              Empowering the <br className="br-desktop"/>
+              Blockchain <br className="br-mobile" />Revolution
             </h1>
-            <p className="open-roles-hero__paragraph">
-              We’re on the mission to build a global, <br className="open-roles-hero__p-br-mobile"/>
-              permissionless, and{" "}
-              <br className="open-roles-hero__p-br" />
-              crypto-economically <br className="open-roles-hero__p-br-mobile"/>secure data and computation marketplace.
+            <p className="open-roles-hero__paragraph open-roles-hero__paragraph-desktop">
+              At the heart of our endeavor is a vision to revolutionize the <br />
+              blockchain landscape. We are committed to creating a worldwide, <br />
+              permissionless marketplace where data and computation thrive on <br />
+              the pillars of crypto-economic security and global transparency.
             </p>
-            <p className="open-roles-hero__paragraph open-roles-hero__paragraph--bold">
-              As our team expands, we welcome those who <br className="open-roles-hero__p-br-mobile"/>share our{" "}
-              <br className="open-roles-hero__p-br" />
-              mission and values.
+            <p className="open-roles-hero__paragraph open-roles-hero__paragraph-mobile">
+              {
+                isReadMore ? <>
+                At the heart of our endeavor is a vision to <br />
+                revolutionize the blockchain landscape. We <br />
+                are committed to creating a worldwide, <br />
+                permissionless marketplace where data <br />
+                and computation thrive on the pillars of <br />
+                crypto-economic security and global <br />
+                transparency.
+                </>
+                : <>
+                  At the heart of our endeavor is a vision to <br />
+                  revolutionize the...
+                </>
+              }
+              {' '}
+              <strong className={'open-roles-hero__read-more'} data-state={isReadMore ? 'open' : 'closed'} onClick={() => setIsReadMore(curr => !curr)}>
+              {isReadMore ? 'show less' : 'read more'}
+            </strong>
             </p>
           </div>
           <div className="open-roles-hero__cta">

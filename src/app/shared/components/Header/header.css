@@ -49,15 +49,11 @@
 }
 
 .header__nav {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.4);
   display: flex;
   font-size: 14px;
-  gap: 2px;
-  @media (min-width: 768px) {
-    padding-left: 29px;
-    padding-right: 29px;
-    gap: 36px;
-  }
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .header__nav-link {
@@ -70,9 +66,21 @@
   position: relative;
   display: flex;
   align-items: center;
-  @media (min-width: 768px) {
-    padding: 19.5px 0;
+  @media (min-width: 770px) {
+    padding: 15.5px 30px;
   }
+  @media (max-width: 396px) {
+    padding: 10.5px 10px;
+    font-size: 12px;
+  }
+}
+
+.header__nav-link:hover{
+  background-color: rgba(238, 238, 238, .6);
+}
+
+.header__nav-link--current-page{
+  background-color: rgba(238, 238, 238, .6);
 }
 
 .header__roles-text {
@@ -87,25 +95,6 @@
     padding: 19.5px 0;
   }
 }
-
-/* header nav a.active:before {
-  background: #2a2a31;
-  width: 6px;
-  height: 6px;
-  border-radius: 999px;
-  transform: translateY(-50%);
-  top: 50%;
-  left: 0;
-  content: "";
-  position: absolute;
-}
-
-@media (min-width: 768px) {
-  header nav a.active:before {
-    transform: translateY(-40%);
-    left: -14px;
-  }
-} */
 
 .header--bg-is-loading .header__logo,
 .header--bg-is-loading .header__logo--desktop {

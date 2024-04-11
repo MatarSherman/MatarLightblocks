@@ -6,7 +6,7 @@
 }
 
 .open-roles-hero__inner {
-  background-image: url("./assets/open_roles_hero_bg.png");
+  background-image: url("/images/open_roles_desktop_bg.jpg");
   background-position: 50% 105%;
   padding-top: 120px;
   padding-bottom: 40px;
@@ -120,16 +120,17 @@
   }
 }
 
-.open-roles-hero__heading-br-desktop {
-  display: none;
-  @media (min-width: 768px) {
-    display: block;
-  }
+.open-roles-hero__heading .br-desktop {
+  display: none
 }
-.open-roles-hero__heading-br-mobile {
-  display: block;
-  @media (min-width: 768px) {
-    display: none;
+
+@media (min-width: 768px) {
+  .open-roles-hero__heading .br-desktop {
+    display: initial
+  }
+  .open-roles-hero__heading .br-mobile {
+    display: none
+
   }
 }
 
@@ -143,17 +144,20 @@
 
 .open-roles-hero__paragraph {
   line-height: 1.6;
-  font-size: clamp(0.85em, 3vw, 1.5em);
-  text-wrap: nowrap;
+  font-size: clamp(0.9em, 3.3vw, 1.4em);
+
   @media (min-width: 768px) {
     font-size: clamp(18px, 2.3vw, 20px);
   }
 }
 
-.open-roles-hero__p-br {
-  display: none;
+.open-roles-hero__paragraph-desktop {
+  display: none
+}
+.open-roles-hero__p-br-mobile {
+  display: block;
   @media (min-width: 768px) {
-    display: block;
+    display: none;
   }
 }
 .open-roles-hero__p-br-mobile {
@@ -163,8 +167,13 @@
   }
 }
 
-.open-roles-hero__paragraph--bold {
-  font-weight: 600;
+@media (min-width: 768px) {
+  .open-roles-hero__paragraph-desktop {
+    display: initial
+  }
+  .open-roles-hero__paragraph-mobile {
+    display: none
+  }
 }
 
 .open-roles-hero__cta {

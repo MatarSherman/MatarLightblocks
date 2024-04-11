@@ -76,8 +76,8 @@ export function TeamCarousel({ isLoaded }) {
 
 function CarouselItem({ filename }) {
   const assetDir = "/images/carousel/";
-  const large = `${assetDir}${filename}-517.png`;
-  const small = `${assetDir}${filename}-191.png`;
+  const large = `${assetDir}${filename}-517.jpg`;
+  const small = `${assetDir}${filename}-191.jpg`;
   return (
     // <div className="team-carousel__image-container">
     <img
