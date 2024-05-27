@@ -118,6 +118,10 @@
   transform: translateY(140px);
 }
 
+.translate-row-8 {
+  transform: translateY(160px);
+}
+
 .team-hiring-cta {
   height: calc(100vh - calc(500px));
   @media (min-width: 550px) {
