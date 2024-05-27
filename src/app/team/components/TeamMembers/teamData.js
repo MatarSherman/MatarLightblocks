@@ -21,13 +21,6 @@ export const teamData = [
       "Major in Intelligence Special Forces with an academic background in Math & Economics. Nimrod led a team, acted as a technological project manager, and was responsible for planning and constructing the main operations of the unit's annual strategy. His role involved planning and decision-making in high-stakes environments, drawing upon his operational experience and academic knowledge.",
   },
   {
-    imageFilename: "anthony_profile",
-    name: "Anthony Bertolino",
-    position: "Head of Growth",
-    description:
-      "Anthony Bertolino was previously the VP of Growth at iTrustCapital and Head of Growth at POAP. He studied Blockchain Technology at Berkeley, and is passionate about Ethereum and permissionless global coordination systems.",
-  },
-  {
     imageFilename: "ittay_profile",
     name: "Prof. Ittay Eyal",
     position: "Research Scientist",
