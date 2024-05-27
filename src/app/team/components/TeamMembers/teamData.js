@@ -139,4 +139,34 @@ export const teamData = [
     position: "Senior Blockchain Engineer",
     description: "5+ years of experience in Blockchain technologies and 15+ in Software engineering. Extensive expertise in the areas of stable coins, security tokens, lending and staking protocols, DIDs and compliance tools design and development. Led the full lifecycle development of various DeFi products, overseeing everything from conceptualization to implementation and deployment with a strong emphasis on security and optimization",
   },
+  {
+    imageFilename: "egor_profile",
+    name: "Egor Prytkov",
+    position: "TechOps Team Lead",
+    description: "I’m a DevOps/SRE Manager with over 16 years of experience across various IT sectors, including telecommunications, banking, security, and blockchain. Outside of work, I enjoy spending time with my family and indulging in hobbies like playing bass and guitar, hiking, and gaming. I’m also an avid fan of the Star Wars and Marvel universes.",
+  },
+  {
+    imageFilename: "roni_profile",
+    name: "Roni Roffe",
+    position: "Director of People & Operations",
+    description: "5+ years of experience in HR positions. As the Director of People and Operations, I oversee the seamless integration of human resources and operational functions to drive organizational success. This involves strategizing and executing initiatives related to talent acquisition, employee development, and organizational efficiency, all aimed at aligning our workforce with our business objectives.",
+  },
+  {
+    imageFilename: "roi_profile",
+    name: "Roi Bar Zur",
+    position: "Researcher based",
+    description: "Roi is currently on an impressive academic journey, pursuing his PhD in electrical engineering at the prestigious Technion - Israel Institute of Technology.  Under the expert guidance of his advisor, Ittay, Roi is delving into the cutting-edge field of blockchain security, with a particular focus on the fascinating role of incentives.  His research is bound to uncover groundbreaking insights that could revolutionize the way we approach digital security. But Roi's brilliance doesn't stop there! He's also armed with a rock-solid foundation in mathematics, thanks to his Bachelor's degree.",
+  },
+  {
+    imageFilename: "vladimir_profile",
+    name: "Vladimir Lukianov",
+    position: "SRE Engineer",
+    description: "In my years of working in IT, I've found that it's important to automate processes and avoid routines. It helps to achieve goals faster, reduce the human factor and thus reduce costs. On the other hand, it's allowed me to use cutting-edge technology to improve my own skills. In my opinion, the implementation of DevOps/SRE standards such as IaaC, CI/CD and observability principles should be a standard for IT organizations looking for growth and efficiency.",
+  },
+  {
+    imageFilename: "liran_profile",
+    name: "Liran Markin",
+    position: "Product Manager",
+    description: "Specializing in data and security, Liran served as a technology researcher in Israel’s intelligence unit and later worked at Sentra as a product manager for their data security product. Remarkably, during high school, Liran obtained a bachelor’s degree in Computer Science, published an academic paper, and represented Israel in the International Olympiad in Informatics.",
+  },
 ];
