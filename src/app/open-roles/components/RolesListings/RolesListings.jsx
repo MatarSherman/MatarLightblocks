@@ -1,27 +1,27 @@
 "use client";
 
-import { Suspense, forwardRef } from "react";
+import { useState, useEffect } from "react";
+import { forwardRef } from "react";
 import * as Accordion from "@radix-ui/react-accordion";
 import "./roles-listings.css";
-import roles from "../../roleData.json";
 import Link from "next/link";
-import Script from "next/script";
 
-export function RolesListings({ departments }) {
+export function RolesListings() {
+  const [departments, setDepartments] = useState([]);
+
+  useEffect(() => {
+    fetch('https://boards-api.greenhouse.io/v1/boards/lightblocks/departments').then(res =>
+      res.json().then(
+        data => setDepartments(data.departments)
+      )
+    )
+  }, [])
+
+
   return (
     <section id="rolesListings" className="roles-listings">
-      {/* <h2 className="roles-listings__heading">Open Roles</h2> */}
-      {/* <div id="grnhse_app"></div> */}
-
-      {/* <iframe
-        style={{ display: "none" }}
-        width={0}
-        height={0}
-        src={
-          <Script src="https://boards.greenhouse.io/embed/job_board/js?for=lightblocks"></Script>
-        }
-      /> */}
-      {/* <Accordion.Root collapsible className="category-list">
+      <h2 className="roles-listings__heading">Open Roles</h2>
+      <Accordion.Root collapsible className="category-list">
         {departments
           .filter((dep) => dep.jobs.length > 0)
           .map((dep) => {
@@ -41,7 +41,7 @@ export function RolesListings({ departments }) {
                     {dep.jobs.map((job) => {
                       return (
                         <li key={`eng_listing_${job.id}`}>
-                          <Link href={`/open-roles/role/${job.id}`}>
+                          <Link href={job.absolute_url}>
                             {job.title}
                           </Link>
                         </li>
@@ -52,7 +52,7 @@ export function RolesListings({ departments }) {
               </Accordion.Item>
             );
           })}
-      </Accordion.Root> */}
+      </Accordion.Root>
     </section>
   );
 }

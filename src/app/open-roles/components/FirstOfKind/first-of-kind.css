@@ -10,7 +10,7 @@
   
   @media (min-width: 768px) {
     place-items: initial;
-    --heading-size: max(calc(1.75vw + 0.6em), 2.15em);
+    --heading-size: max(calc(1.75vw + 0.6em), 2.22em);
     transform: translateX(-4em);
     padding: 80px 0;
     grid-template-columns: 1fr 1fr;
@@ -22,8 +22,8 @@
 .first-of-kind__video-container {
   position: relative;
   opacity: 0;
-  width: calc(var(--heading-size) * 15 - 9em);
-  height: calc(var(--heading-size) * 15 - 9em);
+  width: calc(var(--heading-size) * 14 - 9em);
+  height: calc(var(--heading-size) * 14 - 9em);
   animation: fade-in 0.5s ease forwards;
   animation-delay: 0.5s;
 }

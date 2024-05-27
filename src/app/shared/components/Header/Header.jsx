@@ -46,7 +46,7 @@ export function Header({ isHomePage = false, hasNavBar = true }) {
             >
               Team
             </Link>
-            {/* <Link
+            <Link
               href={"/open-roles"}
               className={`header__nav-link ${
                 path?.startsWith("/open-roles")
@@ -54,8 +54,8 @@ export function Header({ isHomePage = false, hasNavBar = true }) {
                   : ""
               }`}
             >
-              Open roles
-            </Link> */}
+              Careers
+            </Link>
           </nav>
         )}
       </div>
