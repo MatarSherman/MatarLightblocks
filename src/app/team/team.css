@@ -43,23 +43,69 @@
 }
 
 .team-members__row {
-  position: sticky;
-  top: 0;
+  /* position: sticky;
+  top: 0; */
   background-color: var(--color-off-white);
   border-top: 2px solid #2a2a31;
-  height: 500px;
+  /* height: 500px; */
+  animation-delay: 0.5s;
+  animation-name: grow500;
+  animation-duration: 1s;
+  animation-direction: forwards;
+  animation-timing-function: ease;
   @media (min-width: 550px) {
-    height: 600px;
+    animation-name: grow600;
   }
   @media (min-width: 650px) {
-    height: 700px;
+    animation-name: grow700;
   }
   @media (min-width: 800px) {
-    height: 800px;
+    animation-name: grow800;
   }
   @media (min-width: 1000px) {
-    height: 770px;
+    animation-name: grow770;
     border-top: 4px solid #2a2a31;
+  }
+}
+
+@keyframes grow500 {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 500px
+  }
+}
+@keyframes grow600 {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 600px
+  }
+}
+@keyframes grow700 {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 700px
+  }
+}
+@keyframes grow800 {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 800px
+  }
+}
+@keyframes grow770 {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 770px
   }
 }
 
