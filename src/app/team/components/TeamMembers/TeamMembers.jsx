@@ -10,7 +10,7 @@ const size = 1;
 export function TeamMembersListMobile() {
   const [selectedMember, setSelectedMember] = useState(null);
 
-  const rows = chunkArray(teamData, 3);
+  const rows = chunkArray(teamData, 2);
 
   const [pagination, setPagination] = useState(1)
   const [team, setTeam] = useState([...rows.slice(0, pagination * size)])
