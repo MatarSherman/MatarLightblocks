@@ -30,6 +30,7 @@
 
 .team-members-section--desktop {
   display: none;
+
   @media (min-width: 1000px) {
     display: block;
   }
@@ -37,6 +38,7 @@
 
 .team-members-section--mobile {
   display: block;
+
   @media (min-width: 1000px) {
     display: none;
   }
@@ -46,25 +48,34 @@
   /* position: sticky;
   top: 0; */
   background-color: var(--color-off-white);
-  border-top: 2px solid #2a2a31;
-  /* height: 500px; */
-  animation-delay: 0.5s;
+  /* border-top: 2px solid #2a2a31; */
+  height: 500px;
+  /* transition-property: none !important; */
+  /* animation-delay: 0.5s;
   animation-name: grow500;
   animation-duration: 1s;
   animation-direction: forwards;
-  animation-timing-function: ease;
+  animation-timing-function: ease; */
+
   @media (min-width: 550px) {
-    animation-name: grow600;
+    /* animation-name: grow600; */
+    height: 600px;
   }
+
   @media (min-width: 650px) {
-    animation-name: grow700;
+    /* animation-name: grow700; */
+    height: 700px;
   }
+
   @media (min-width: 800px) {
-    animation-name: grow800;
+    /* animation-name: grow800; */
+    height: 800px;
   }
+
   @media (min-width: 1000px) {
-    animation-name: grow770;
-    border-top: 4px solid #2a2a31;
+    /* animation-name: grow770; */
+    height: 770px;
+    /* border-top: 4px solid #2a2a31; */
   }
 }
 
@@ -109,6 +120,7 @@
   }
 }
 
+
 .team-members-row__inner {
   display: grid;
   gap: 0 0.5rem;
@@ -118,6 +130,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: flex-start;
+
   @media (min-width: 450px) {
     gap: 0 1rem;
     padding: 2rem 1rem;
@@ -170,18 +183,23 @@
 
 .team-hiring-cta {
   height: calc(100vh - calc(500px));
+
   @media (min-width: 550px) {
     height: calc(100vh - calc(600px));
   }
+
   @media (min-width: 650px) {
     height: calc(100vh - calc(700px));
   }
+
   @media (min-width: 800px) {
     height: calc(100vh - calc(800px));
   }
+
   @media (min-width: 1000px) {
     height: calc(100vh - calc(770px));
   }
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -194,6 +212,7 @@
 .team-hiring-cta h2 {
   font-size: 44px;
   font-weight: 600;
+
   @media (min-width: 768px) {
     font-size: 64px;
   }
@@ -202,6 +221,7 @@
 .team-hiring-cta div {
   font-size: 26px;
   font-weight: 600;
+
   @media (min-width: 768px) {
     font-size: 48px;
   }

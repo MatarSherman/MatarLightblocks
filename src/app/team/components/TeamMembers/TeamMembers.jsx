@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { TeamMemberCard } from "./TeamMemberCard/TeamMemberCard";
 import { teamData } from "./teamData";
 import InfiniteScroll from "react-infinite-scroll-component";
@@ -15,8 +15,7 @@ export function TeamMembersListMobile() {
   const [pagination, setPagination] = useState(1)
   const [team, setTeam] = useState([...rows.slice(0, pagination * size)])
 
-  const loadMoreTeam = () => {
-    // await new Promise(resolve => setTimeout(resolve, 300))
+  const loadMoreTeam = async () => {
     setTeam([...rows.slice(0, (pagination + 1) * size)]);
     setPagination(curr => curr + 1);
   };
@@ -81,7 +80,7 @@ export function TeamMembersListDesktop() {
 
 function TeamMembersRow({ members, index, selectedMember, setSelectedMember }) {
   return (
-    <div className={`team-members__row translate-row-${index}`}>
+    <div className={`team-members__row`}>
       <div className="team-members-row__inner">
         {members.map((member) => (
           <TeamMemberCard
