@@ -162,4 +162,10 @@ export const teamData = [
     position: "Product Manager",
     description: "Specializing in data and security, Liran served as a technology researcher in Israel’s intelligence unit and later worked at Sentra as a product manager for their data security product. Remarkably, during high school, Liran obtained a bachelor’s degree in Computer Science, published an academic paper, and represented Israel in the International Olympiad in Informatics.",
   },
+  {
+    imageFilename: "ronB_profile",
+    name: "Ron Bronstein",
+    position: "Community & Marketing Operations ",
+    description: "Ron is a digital marketer with 6 years of experience. Enthusiastic about decentralization and crypto economics. ",
+  },
 ];
