@@ -53,7 +53,8 @@
   opacity: 0;
   max-height: 500px;
   animation-name: grow;
-  animation-duration: 0.3s;
+  animation-delay: 0.1s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
   animation-timing-function: ease; 
   /* transition-property: none !important; */
@@ -89,6 +90,7 @@
 @keyframes grow {
   from {
     height: 0px;
+    opacity: 0;
   }
   to {
     height: 1000px;
