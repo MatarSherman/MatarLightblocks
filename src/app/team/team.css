@@ -50,13 +50,11 @@
   background-color: var(--color-off-white);
   /* border-top: 2px solid #2a2a31; */
   height: 500px;
-  opacity: 0;
   max-height: 500px;
   animation-name: grow;
-  animation-delay: 0.1s;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
-  animation-timing-function: ease; 
+  animation-timing-function: ease-out;
   /* transition-property: none !important; */
   /* animation-delay: 0.5s;
   */
@@ -90,55 +88,12 @@
 @keyframes grow {
   from {
     height: 0px;
-    opacity: 0;
   }
+
   to {
     height: 1000px;
-    opacity: 1;
   }
 }
-
-@keyframes grow500 {
-  from {
-    height: 0px;
-  }
-  to {
-    height: 500px
-  }
-}
-@keyframes grow600 {
-  from {
-    height: 0px;
-  }
-  to {
-    height: 600px
-  }
-}
-@keyframes grow700 {
-  from {
-    height: 0px;
-  }
-  to {
-    height: 700px
-  }
-}
-@keyframes grow800 {
-  from {
-    height: 0px;
-  }
-  to {
-    height: 800px
-  }
-}
-@keyframes grow770 {
-  from {
-    height: 0px;
-  }
-  to {
-    height: 770px
-  }
-}
-
 
 .team-members-row__inner {
   display: grid;
