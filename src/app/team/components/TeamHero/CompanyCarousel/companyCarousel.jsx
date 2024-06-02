@@ -10,15 +10,6 @@ const companyImages = [
     'google.png',
     'meta.png',
     'osmosis.png',
-    'albert.png',
-    'bloxroute.png',
-    'chainstack.png',
-    'chaos.png',
-    'cosmos.png',
-    'ethereum.png',
-    'google.png',
-    'meta.png',
-    'osmosis.png'
 ]
 
 export const CompanyCarousel = () => {
@@ -27,7 +18,7 @@ export const CompanyCarousel = () => {
             <div className="company-carousel">
                 <div className='company-carousel-content'>
                     {
-                        companyImages.map((filename, index) => (
+                        [...companyImages, ...companyImages].map((filename, index) => (
                             <img key={index} src={`/images/companyCarousel/${filename}`} />
                         ))
                     }
