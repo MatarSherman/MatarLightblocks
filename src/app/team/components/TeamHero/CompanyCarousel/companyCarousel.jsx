@@ -23,14 +23,18 @@ const companyImages = [
 
 export const CompanyCarousel = () => {
     return (
-        <div className="company-carousel">
-            <div className='company-carousel-content'>
-                {
-                    companyImages.map((filename, index) => (
-                        <img key={index} src={`/images/companyCarousel/${filename}`} />
-                    ))
-                }
+        <div className='company-carousel-wrapper'>
+            <div className="company-carousel">
+                <div className='company-carousel-content'>
+                    {
+                        companyImages.map((filename, index) => (
+                            <img key={index} src={`/images/companyCarousel/${filename}`} />
+                        ))
+                    }
+                </div>
             </div>
+            <div className="company-carousel__fade company-carousel__fade-left" />
+            <div className="company-carousel__fade company-carousel__fade-right" />
         </div>
     )
 }
