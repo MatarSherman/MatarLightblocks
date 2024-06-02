@@ -50,32 +50,49 @@
   background-color: var(--color-off-white);
   /* border-top: 2px solid #2a2a31; */
   height: 500px;
+  opacity: 0;
+  max-height: 500px;
+  animation-name: grow;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease; 
   /* transition-property: none !important; */
   /* animation-delay: 0.5s;
-  animation-name: grow500;
-  animation-duration: 1s;
-  animation-direction: forwards;
-  animation-timing-function: ease; */
+  */
 
   @media (min-width: 550px) {
     /* animation-name: grow600; */
-    height: 600px;
+    /* height: 600px; */
+    max-height: 600px;
   }
 
   @media (min-width: 650px) {
     /* animation-name: grow700; */
-    height: 700px;
+    /* height: 700px; */
+    max-height: 700px;
   }
 
   @media (min-width: 800px) {
     /* animation-name: grow800; */
-    height: 800px;
+    /* height: 800px; */
+    max-height: 800px;
   }
 
   @media (min-width: 1000px) {
     /* animation-name: grow770; */
-    height: 770px;
+    /* height: 770px; */
+    max-height: 770px;
     /* border-top: 4px solid #2a2a31; */
+  }
+}
+
+@keyframes grow {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 1000px;
+    opacity: 1;
   }
 }
 

@@ -51,8 +51,8 @@ export function TeamMembersListDesktop() {
   const [pagination, setPagination] = useState(1)
   const [team, setTeam] = useState([...rows.slice(0, pagination * size)])
 
-  const loadMoreTeam = () => {
-    // await new Promise(resolve => setTimeout(resolve, 300))
+  const loadMoreTeam = async () => {
+    await new Promise(resolve => setTimeout(resolve, 300))
     setTeam([...rows.slice(0, (pagination + 1) * size)]);
     setPagination(curr => curr + 1);
   };
@@ -63,7 +63,10 @@ export function TeamMembersListDesktop() {
         dataLength={team.length}
         hasMore={rows.length > team.length}
         next={loadMoreTeam}
-        style={{ width: "100%", overflow: "hidden" }}>
+        style={{ width: "100%", overflow: "hidden", paddingBlockEnd: '100px' }}
+        initialScrollY={0}
+        scrollThreshold={0.95}
+      >
         {team.map((row, i) => {
           return (
             <TeamMembersRow
