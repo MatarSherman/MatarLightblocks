@@ -1,0 +1,20 @@
+.company-carousel {
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.company-carousel-content {
+    display: flex;
+    max-width: 100%;
+    gap: 3em;
+    animation: companyCarousel 60s linear infinite;
+}
+
+@keyframes companyCarousel {
+    from {
+        transform: translateX(0%)
+    }
+    to {
+        transform: translateX(-114.3%)
+    }
+}
