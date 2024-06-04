@@ -53,6 +53,7 @@
   max-height: 500px;
   animation-name: grow;
   animation-duration: 1s;
+  animation-delay: 0.5s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-out;
   /* transition-property: none !important; */
