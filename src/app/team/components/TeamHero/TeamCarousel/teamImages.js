@@ -17,6 +17,12 @@ export const teamImagesTop = [
   {
     filename: "top_6",
   },
+  {
+    filename: "top_7",
+  },
+  {
+    filename: "top_8",
+  },
 ];
 
 export const teamImagesBottom = [
@@ -37,5 +43,8 @@ export const teamImagesBottom = [
   },
   {
     filename: "bottom_6",
+  },
+  {
+    filename: "bottom_7",
   },
 ];

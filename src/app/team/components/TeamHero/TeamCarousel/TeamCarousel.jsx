@@ -13,7 +13,7 @@ export function TeamCarousel({ isLoaded }) {
         {teamImagesTop.map(({ filename }, i) => (
           <CarouselItem key={`track2_${i}`} filename={filename} />
         ))}
-        {teamImagesTop.map(({ filename }, i) => (
+        {/* {teamImagesTop.map(({ filename }, i) => (
           <CarouselItem key={`track3_${i}`} filename={filename} />
         ))}
         {teamImagesTop.map(({ filename }, i) => (
@@ -36,7 +36,7 @@ export function TeamCarousel({ isLoaded }) {
         ))}
         {teamImagesTop.map(({ filename }, i) => (
           <CarouselItem key={`track10_${i}`} filename={filename} />
-        ))}
+        ))} */}
       </div>
       <div className="team-carousel__track team-carousel__track--bottom">
         {teamImagesBottom.map(({ filename }, i) => (
@@ -45,7 +45,7 @@ export function TeamCarousel({ isLoaded }) {
         {teamImagesBottom.map(({ filename }, i) => (
           <CarouselItem key={`btrack2_${i}`} filename={filename} />
         ))}
-        {teamImagesBottom.map(({ filename }, i) => (
+        {/* {teamImagesBottom.map(({ filename }, i) => (
           <CarouselItem key={`btrack3_${i}`} filename={filename} />
         ))}
         {teamImagesBottom.map(({ filename }, i) => (
@@ -68,7 +68,7 @@ export function TeamCarousel({ isLoaded }) {
         ))}
         {teamImagesBottom.map(({ filename }, i) => (
           <CarouselItem key={`btrack10_${i}`} filename={filename} />
-        ))}
+        ))} */}
       </div>
     </div>
   );
