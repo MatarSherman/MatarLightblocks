@@ -2,6 +2,7 @@
   background: url(/images/team-hero-background.jpg) no-repeat;
   background-size: cover;
   position: relative;
+  overflow-x: hidden;
 }
 
 .team-hero::after {

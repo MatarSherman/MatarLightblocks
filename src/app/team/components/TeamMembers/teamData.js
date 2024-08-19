@@ -121,12 +121,6 @@ export const teamData = [
     description: "Ehsan is a software engineer with 10 years of software and 4 years of blockchain development experiences. He is the Director of Blockchain & Transactive Energy at IEMS Solutions. He has a solid skillset in designing and developing micro-services and distributed services. He is most interested in different distributed ledger technologies such as blockchain and contributed to different projects such as Cosmos, THORChain, THORSwap, Osmosis and etc.",
   },
   {
-    imageFilename: "heinrich_profile",
-    name: "Heinrich Tessendorf",
-    position: "Content & Community manager",
-    description: "Hands-on content & community manager fueled by a passion for blockchain's potential and building bridges between the community and innovative projects.",
-  },
-  {
     imageFilename: "tetiana_profile",
     name: "Tetiana Afonina",
     position: "Senior Blockchain Engineer",
@@ -161,5 +155,11 @@ export const teamData = [
     name: "Liran Markin",
     position: "Product Manager",
     description: "Specializing in data and security, Liran served as a technology researcher in Israel’s intelligence unit and later worked at Sentra as a product manager for their data security product. Remarkably, during high school, Liran obtained a bachelor’s degree in Computer Science, published an academic paper, and represented Israel in the International Olympiad in Informatics.",
+  },
+  {
+    imageFilename: "ronB_profile",
+    name: "Ron Bronstein",
+    position: "Community & Marketing Operations ",
+    description: "Ron is a digital marketer with 6 years of experience. Enthusiastic about decentralization and crypto economics. ",
   },
 ];

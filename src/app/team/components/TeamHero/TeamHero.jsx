@@ -1,3 +1,4 @@
+import { CompanyCarousel } from "./CompanyCarousel/companyCarousel";
 import { TeamCarousel } from "./TeamCarousel/TeamCarousel";
 import "./team-hero.css";
 
@@ -23,6 +24,7 @@ export function TeamHero({ isLoaded }) {
           </div> */}
         </div>
         <TeamCarousel isLoaded={isLoaded} />
+        <CompanyCarousel />
       </div>
     </div>
   );

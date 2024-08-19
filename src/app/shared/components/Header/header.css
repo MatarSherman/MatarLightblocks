@@ -17,7 +17,7 @@
   position: absolute;
   z-index: 999;
   width: 100%;
-  background: transparent;
+  background: rgba(255, 255, 255, 0);
   transition: all 0.5s;
   top: 26px;
   @media (min-width: 768px) {

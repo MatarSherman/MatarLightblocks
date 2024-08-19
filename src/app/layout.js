@@ -53,7 +53,9 @@ export default function RootLayout({ children }) {
 
       <body>
         <Header />
-        <SmoothScrolling>{children}</SmoothScrolling>
+        <SmoothScrolling>
+          {children}
+        </SmoothScrolling>
         {/* <Script src="https://boards.greenhouse.io/embed/job_board/js?for=lightblocks"></Script> */}
       </body>
     </html>

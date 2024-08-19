@@ -1,0 +1,47 @@
+.company-carousel-wrapper {
+    margin-top: 25px;
+    max-width: 100%;
+    position: relative;
+    overflow-x: clip;
+    overflow-y: visible;
+}
+
+.company-carousel {
+    max-width: 100%;
+    position: relative;
+}
+
+.company-carousel__fade {
+    position: absolute;
+    filter: blur(15px);
+    top: -140%;
+    width: 82%;
+    height: 400%;
+}
+
+.company-carousel__fade-left {
+    left: -55%;
+    background-image: radial-gradient(ellipse at 50% 50%, #fff 35%, rgba(255, 255, 255, 0) 100%)
+}
+
+.company-carousel__fade-right {
+    right: -55%;
+    background-image: radial-gradient(ellipse at 50% 50%, #fff 35%, rgba(255, 255, 255, 0) 100%)
+}
+
+.company-carousel-content {
+    display: flex;
+    max-width: 100%;
+    gap: 3em;
+    animation: companyCarousel 90s linear infinite;
+}
+
+@keyframes companyCarousel {
+    from {
+        transform: translateX(0%)
+    }
+
+    to {
+        transform: translateX(-114.3%)
+    }
+}

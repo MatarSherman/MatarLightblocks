@@ -1,5 +1,15 @@
+'use client';
+
 import { teamImagesTop, teamImagesBottom } from "./teamImages";
 import "./team-carousel.css";
+
+const concatDupe = (array=[], dupesAmount) => {
+  const newArray = []
+  for (let count = 0; count < dupesAmount; count++) {
+    newArray.push(...array)
+  }
+  return newArray
+}
 
 export function TeamCarousel({ isLoaded }) {
   return (
@@ -7,67 +17,14 @@ export function TeamCarousel({ isLoaded }) {
       className={`team-carousel ${isLoaded ? "team-carousel--visible" : ""}`}
     >
       <div className="team-carousel__track">
-        {teamImagesTop.map(({ filename }, i) => (
+        {
+        concatDupe(teamImagesTop, 4).map(({ filename }, i) => (
           <CarouselItem key={`track_${i}`} filename={filename} />
-        ))}
-        {teamImagesTop.map(({ filename }, i) => (
-          <CarouselItem key={`track2_${i}`} filename={filename} />
-        ))}
-        {teamImagesTop.map(({ filename }, i) => (
-          <CarouselItem key={`track3_${i}`} filename={filename} />
-        ))}
-        {teamImagesTop.map(({ filename }, i) => (
-          <CarouselItem key={`track4_${i}`} filename={filename} />
-        ))}
-        {teamImagesTop.map(({ filename }, i) => (
-          <CarouselItem key={`track5_${i}`} filename={filename} />
-        ))}
-        {teamImagesTop.map(({ filename }, i) => (
-          <CarouselItem key={`track6_${i}`} filename={filename} />
-        ))}
-        {teamImagesTop.map(({ filename }, i) => (
-          <CarouselItem key={`track7_${i}`} filename={filename} />
-        ))}
-        {teamImagesTop.map(({ filename }, i) => (
-          <CarouselItem key={`track8_${i}`} filename={filename} />
-        ))}
-        {teamImagesTop.map(({ filename }, i) => (
-          <CarouselItem key={`track9_${i}`} filename={filename} />
-        ))}
-        {teamImagesTop.map(({ filename }, i) => (
-          <CarouselItem key={`track10_${i}`} filename={filename} />
         ))}
       </div>
       <div className="team-carousel__track team-carousel__track--bottom">
-        {teamImagesBottom.map(({ filename }, i) => (
+        {concatDupe(teamImagesBottom, 4).map(({ filename }, i) => (
           <CarouselItem key={`btrack_${i}`} filename={filename} />
-        ))}
-        {teamImagesBottom.map(({ filename }, i) => (
-          <CarouselItem key={`btrack2_${i}`} filename={filename} />
-        ))}
-        {teamImagesBottom.map(({ filename }, i) => (
-          <CarouselItem key={`btrack3_${i}`} filename={filename} />
-        ))}
-        {teamImagesBottom.map(({ filename }, i) => (
-          <CarouselItem key={`btrack4_${i}`} filename={filename} />
-        ))}
-        {teamImagesBottom.map(({ filename }, i) => (
-          <CarouselItem key={`btrack5_${i}`} filename={filename} />
-        ))}
-        {teamImagesBottom.map(({ filename }, i) => (
-          <CarouselItem key={`btrack6_${i}`} filename={filename} />
-        ))}
-        {teamImagesBottom.map(({ filename }, i) => (
-          <CarouselItem key={`btrack7_${i}`} filename={filename} />
-        ))}
-        {teamImagesBottom.map(({ filename }, i) => (
-          <CarouselItem key={`btrack8_${i}`} filename={filename} />
-        ))}
-        {teamImagesBottom.map(({ filename }, i) => (
-          <CarouselItem key={`btrack9_${i}`} filename={filename} />
-        ))}
-        {teamImagesBottom.map(({ filename }, i) => (
-          <CarouselItem key={`btrack10_${i}`} filename={filename} />
         ))}
       </div>
     </div>

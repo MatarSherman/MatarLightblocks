@@ -162,7 +162,7 @@
   }
   .role-page .banner__content > * {
     box-shadow: none;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0);
   }
 
   .role-page .banner__content p br.desktop {

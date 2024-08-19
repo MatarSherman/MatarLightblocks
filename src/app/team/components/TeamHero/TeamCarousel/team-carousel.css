@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  max-width: 200%;
+  max-width: min(200%, 4000px);
+  margin-inline: auto;
   padding-top: 24px;
   min-height: 295px;
   opacity: 0;
@@ -46,7 +47,7 @@
   align-items: flex-start;
   left: 0;
   width: 400%;
-  animation: slide 120s linear infinite;
+  animation: slide 180s linear infinite;
 }
 
 .team-carousel__track:before {

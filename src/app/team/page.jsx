@@ -1,8 +1,15 @@
+'use client';
+
+import { useLayoutEffect } from "react";
 import { TeamHero } from "./components/TeamHero/TeamHero";
 import { TeamMembers } from "./components/TeamMembers/TeamMembers";
 import "./team.css";
 
 function Team() {
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0 })
+  }, [])
+
   return (
     <main className="main team-main">
       <TeamHero isLoaded={true} />
