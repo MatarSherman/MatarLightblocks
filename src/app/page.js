@@ -1,52 +1,7 @@
-"use client";
-// import { ButtonLink } from "@/app/shared/components/ButtonLink/ButtonLink";
-// import VideoBackgroundLoader from "@/components/Loaders/VideoBackgroundLoader";
 import "@/app/home.css";
-// import HomeVideoLoader from "@/components/Loaders/HomeVideoLoader";
-import { useEffect, useState } from "react";
+import { Kaka } from "./kaka";
 
 export default function Home() {
-  const [Spline, setSpline] = useState();
-
-  if (!Spline) {
-    try {
-
-      import("@splinetool/react-spline").then((spline) => {
-        setSpline(spline.default);
-        console.log('splinedefault: ',spline.default)
-      });
-    } catch (err) {
-      console.log(err)
-    }
-  }
-
-  useEffect(() => {
-    if (!Spline) {
-      try {
-
-        import("@splinetool/react-spline").then((spline) => {
-          setSpline(spline.default);
-          console.log('splinedefault: ',spline.default)
-        });
-      } catch (err) {
-        console.log(err)
-      }
-    }
-  }, []);
-
-  useEffect(() => {
-    if (!Spline) {
-      try {
-
-        import("@splinetool/react-spline").then((spline) => {
-          setSpline(spline.default);
-          console.log('splinedefault: ',spline.default)
-        });
-      } catch (err) {
-        console.log(err)
-      }
-    }
-  }, [Spline]);
 
   return (
     <main className="home_page">
@@ -75,14 +30,7 @@ export default function Home() {
       </div> */}
       {/* <HomeVideoLoader />
       <VideoBackgroundLoader /> */}
-      {Spline ? (
-        <Spline
-          scene="https://prod.spline.design/0rqxcsk4GcwtvCqk/scene.splinecode"
-          // onLoad={onLoad}
-        />
-      ) : (
-        "HELLO"
-      )}
+      <Kaka />
     </main>
   );
 }
