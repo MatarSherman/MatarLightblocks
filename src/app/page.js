@@ -1,11 +1,12 @@
+import { ButtonLink } from "@/app/shared/components/ButtonLink/ButtonLink";
+import VideoBackgroundLoader from "@/components/Loaders/VideoBackgroundLoader";
 import "@/app/home.css";
-import { Kaka } from "./kaka";
+import HomeVideoLoader from "@/components/Loaders/HomeVideoLoader";
 
 export default function Home() {
-
   return (
     <main className="home_page">
-      {/* <div className="content fade-in">
+      <div className="content fade-in">
         <h1 className="home-hero__heading">
           lightblocks labs
         </h1>
@@ -27,10 +28,9 @@ export default function Home() {
             Meet the team
           </ButtonLink>
         </div>
-      </div> */}
-      {/* <HomeVideoLoader />
-      <VideoBackgroundLoader /> */}
-      <Kaka />
+      </div>
+      <HomeVideoLoader />
+      <VideoBackgroundLoader />
     </main>
   );
 }
