@@ -3,9 +3,16 @@
 // import VideoBackgroundLoader from "@/components/Loaders/VideoBackgroundLoader";
 import "@/app/home.css";
 // import HomeVideoLoader from "@/components/Loaders/HomeVideoLoader";
-import Spline from "@splinetool/react-spline";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [Spline, setSpline] = useState()
+
+  useEffect(() => {
+    if (!Spline) {
+      import("@splinetool/react-spline").then((spline) => setSpline(spline.default));
+    }
+  }, []);
   return (
     <main className="home_page">
       {/* <div className="content fade-in">
@@ -33,10 +40,13 @@ export default function Home() {
       </div> */}
       {/* <HomeVideoLoader />
       <VideoBackgroundLoader /> */}
-      <Spline
-        scene="https://prod.spline.design/0rqxcsk4GcwtvCqk/scene.splinecode"
-        // onLoad={onLoad}
-      />
+      {
+        Spline ?
+        <Spline
+          scene="https://prod.spline.design/0rqxcsk4GcwtvCqk/scene.splinecode"
+          // onLoad={onLoad}
+        />: 'HELLO'
+      }
     </main>
   );
 }
