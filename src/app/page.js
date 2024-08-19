@@ -10,12 +10,32 @@ export default function Home() {
 
   useEffect(() => {
     if (!Spline) {
-      import("@splinetool/react-spline").then((spline) => {
-        setSpline(spline.default);
-        console.log(spline.default)
-      });
+      try {
+
+        import("@splinetool/react-spline").then((spline) => {
+          setSpline(spline.default);
+          console.log('splinedefault: ',spline.default)
+        });
+      } catch (err) {
+        console.log(err)
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!Spline) {
+      try {
+
+        import("@splinetool/react-spline").then((spline) => {
+          setSpline(spline.default);
+          console.log('splinedefault: ',spline.default)
+        });
+      } catch (err) {
+        console.log(err)
+      }
     }
   }, [Spline]);
+  
   return (
     <main className="home_page">
       {/* <div className="content fade-in">
