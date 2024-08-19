@@ -1,4 +1,4 @@
-'use client';
+"use client";
 // import { ButtonLink } from "@/app/shared/components/ButtonLink/ButtonLink";
 // import VideoBackgroundLoader from "@/components/Loaders/VideoBackgroundLoader";
 import "@/app/home.css";
@@ -6,13 +6,16 @@ import "@/app/home.css";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [Spline, setSpline] = useState()
+  const [Spline, setSpline] = useState();
 
   useEffect(() => {
     if (!Spline) {
-      import("@splinetool/react-spline").then((spline) => setSpline(spline.default));
+      import("@splinetool/react-spline").then((spline) => {
+        setSpline(spline.default);
+        console.log(spline.default)
+      });
     }
-  }, []);
+  }, [Spline]);
   return (
     <main className="home_page">
       {/* <div className="content fade-in">
@@ -40,13 +43,14 @@ export default function Home() {
       </div> */}
       {/* <HomeVideoLoader />
       <VideoBackgroundLoader /> */}
-      {
-        Spline ?
+      {Spline ? (
         <Spline
           scene="https://prod.spline.design/0rqxcsk4GcwtvCqk/scene.splinecode"
           // onLoad={onLoad}
-        />: 'HELLO'
-      }
+        />
+      ) : (
+        "HELLO"
+      )}
     </main>
   );
 }
