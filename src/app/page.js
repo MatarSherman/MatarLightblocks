@@ -8,6 +8,18 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [Spline, setSpline] = useState();
 
+  if (!Spline) {
+    try {
+
+      import("@splinetool/react-spline").then((spline) => {
+        setSpline(spline.default);
+        console.log('splinedefault: ',spline.default)
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
   useEffect(() => {
     if (!Spline) {
       try {
@@ -35,7 +47,7 @@ export default function Home() {
       }
     }
   }, [Spline]);
-  
+
   return (
     <main className="home_page">
       {/* <div className="content fade-in">
