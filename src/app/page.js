@@ -1,12 +1,14 @@
-import { ButtonLink } from "@/app/shared/components/ButtonLink/ButtonLink";
-import VideoBackgroundLoader from "@/components/Loaders/VideoBackgroundLoader";
+'use client';
+// import { ButtonLink } from "@/app/shared/components/ButtonLink/ButtonLink";
+// import VideoBackgroundLoader from "@/components/Loaders/VideoBackgroundLoader";
 import "@/app/home.css";
-import HomeVideoLoader from "@/components/Loaders/HomeVideoLoader";
+// import HomeVideoLoader from "@/components/Loaders/HomeVideoLoader";
+import Spline from "@splinetool/react-spline";
 
 export default function Home() {
   return (
     <main className="home_page">
-      <div className="content fade-in">
+      {/* <div className="content fade-in">
         <h1 className="home-hero__heading">
           lightblocks labs
         </h1>
@@ -28,9 +30,13 @@ export default function Home() {
             Meet the team
           </ButtonLink>
         </div>
-      </div>
-      <HomeVideoLoader />
-      <VideoBackgroundLoader />
+      </div> */}
+      {/* <HomeVideoLoader />
+      <VideoBackgroundLoader /> */}
+      <Spline
+        scene="https://prod.spline.design/0rqxcsk4GcwtvCqk/scene.splinecode"
+        // onLoad={onLoad}
+      />
     </main>
   );
 }
